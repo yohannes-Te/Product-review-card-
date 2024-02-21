@@ -1,0 +1,153 @@
+/* variables declared here - these are colors for our pages, as well as the font stacks and sizes. */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --primery-Dark-cyan: hsl(158, 36%, 37%);
+  --primery-Cream: hsl(30, 38%, 92%);
+  --neutral-Very-dark-blue: hsl(212, 21%, 14%);
+  --neutral-Dark-grayish-blue: hsl(228, 12%, 48%);
+  --neutral-White: hsl(0, 0%, 100%);
+
+  --font-size: 14px;
+
+  --Fraunces: "Fraunces", serif;
+  --Montserrat: "Montserrat", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--neutral-Dark-grayish-blue);
+  background-color: var(--primery-Cream);
+  font-family: var(--Montserrat);
+  align-items: center;
+}
+
+#outer-Wrapper {
+  margin: 1.5rem 1rem;
+}
+
+#outer-Wrapper .inner-wrapper {
+  max-width: 590px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  background-color: var(--neutral-White);
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 60vh;
+  margin: 0;
+  padding: 0;
+  background: url("images/image-product-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.discription {
+  padding: 1.2rem;
+}
+
+.discription h1 {
+  color: var(--neutral-Very-dark-blue);
+  font-family: var(--Fraunces);
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.discription .catagory {
+  letter-spacing: 0.5rem;
+  color: var(--neutral-Dark-grayish-blue);
+  font-family: var(--Montserrat );
+  font-weight: 500;
+  font-size: 0.6rem;
+}
+
+.discription .disc {
+  margin: 0;
+  padding-right: 1rem;
+  color: var(--neutral-Dark-grayish-blue);
+  font-family: var(--Montserrat );
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.discription .actual-price {
+  color: var(--primery-Dark-cyan);
+  font-family: var(--Fraunces);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.discription .gross {
+  position: relative;
+  font-size: 1rem;
+  text-decoration: line-through;
+  top: -6px;
+}
+
+.discription button {
+  background-color: var(--primery-Dark-cyan);
+  border: none;
+  border-radius: 12px;
+
+  color: var(--neutral-White);
+  padding: 1rem 4rem;
+  font-size: 0.9rem;
+  font-family: var(--Montserrat);
+  font-weight: 700;
+}
+
+.discription button:hover {
+  background-color: hsl(158, 39%, 25%);
+  transition: all 0.8s ease-in-out;
+}
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+@media (min-width:375px){
+  .inner-wrapper{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 7rem auto 6rem;
+  }
+  
+  .img-wrapper{
+    width: 50%;
+    height: auto;
+    background: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  
+  .discription{
+      width: 50%;
+      }
+}
